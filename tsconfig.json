@@ -3,14 +3,21 @@
     "baseUrl": ".",
     "outDir": "dist/lib",
     "sourceMap": false,
-    "module": "esnext",
+    "module": "es2015",
     "moduleResolution": "node",
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "target": "esnext",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
     "noImplicitAny": true
   },
-  "exclude": ["node_modules/**/*", "dist/**/*", "tests/**/*"]
+  "exclude": [
+    "node_modules/**/*",
+    "dist/**/*",
+    "tests/**/*"
+  ]
 }
