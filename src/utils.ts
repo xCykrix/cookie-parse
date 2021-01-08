@@ -39,8 +39,8 @@ export function applyOnFalse(bool: boolean, onFalse: Arity1Fn): Arity1Fn {
 export function splitString(separator: string | RegExp, options?: SplitStringOptions): (str: string) => string[] {
   return pipe(
     split(separator),
-    applyOnFalse(options?.skipTrim, map(trim)),
-    applyOnFalse(options?.skipFilter, filter(isNotNilOrEmpty))
+    applyOnFalse(options?.skipTrim === true, map(trim)),
+    applyOnFalse(options?.skipFilter === true, filter(isNotNilOrEmpty))
   );
 }
 
